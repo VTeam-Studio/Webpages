@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anasazi Culture - US History Exploration</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(45deg, #f4e4bc, #e6d3a3, #d4c4a8);
+            background-size: 400% 400%;
+            animation: sandTexture 8s ease-in-out infinite;
+            min-height: 100vh;
+            color: #5d4e37;
+        }
+
+        @keyframes sandTexture {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #8b4513;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #6b5b47;
+            font-style: italic;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #8b4513;
+            font-size: 2.2em;
+            margin-bottom: 20px;
+            text-align: center;
+            border-bottom: 3px solid #d4c4a8;
+            padding-bottom: 10px;
+        }
+
+        h3 {
+            color: #6b5b47;
+            font-size: 1.5em;
+            margin: 20px 0 15px 0;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .image-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .image-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
+        }
+
+        .image-caption {
+            font-size: 1.1em;
+            color: #5d4e37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .image-description {
+            font-size: 0.95em;
+            color: #6b5b47;
+            line-height: 1.6;
+        }
+
+        .hero-section {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .hero-image {
+            flex: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .hero-text h2 {
+            text-align: left;
+            border: none;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, #8b4513, #d4c4a8);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin: 40px 0;
+            width: 45%;
+        }
+
+        .timeline-item:nth-child(odd) {
+            left: 0;
+        }
+
+        .timeline-item:nth-child(even) {
+            left: 55%;
+        }
+
+        .timeline-content {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #8b4513;
+            font-size: 1.2em;
+        }
+
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 30px 0;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .comparison-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+            }
+            
+            .comparison-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Anasazi Culture Exploration</h1>
+            <p class="subtitle">The Mysterious World of Ancient Pueblo People</p>
+        </header>
+
+        <!-- Hero Section - Site Entrance -->
+        <section class="hero-section">
+            <div class="hero-image">
+                <img src="pic7.jpg" alt="Anasazi Site Entrance">
+            </div>
+            <div class="hero-text">
+                <h2>Welcome to the World of Anasazi</h2>
+                <p>The Anasazi (Ancient Pueblo People) were ancient indigenous people who lived in the American Southwest, creating astonishing architectural and artistic achievements. From 100 AD to 1600 AD, these mysterious people established a complex civilization on the Colorado Plateau.</p>
+                <p>Their architectural skills, pottery making, and artistic creations continue to fascinate archaeologists and historians today. Let us explore this vanished civilization in depth through this website.</p>
+            </div>
+        </section>
+
+        <!-- Main Archaeological Sites -->
+        <section class="section">
+            <h2>Main Archaeological Sites</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="pic1.jpg" alt="Anasazi Archaeological Site">
+                    <div class="image-caption">Anasazi Archaeological Site</div>
+                    <div class="image-description">These well-preserved stone structures showcase the exceptional architectural skills of the Anasazi people. They used local sandstone to construct multi-story buildings, including dwellings, storage rooms, and ceremonial spaces.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Art and Culture -->
+        <section class="section">
+            <h2>Art and Cultural Expressions</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="pic2.jpg" alt="Mystical Mural Paintings">
+                    <div class="image-caption">Mystical Mythological Murals</div>
+                    <div class="image-description">These exquisite murals depict the spiritual world and mythological legends of the Anasazi people. Complex geometric patterns and symbolic imagery reflect their understanding of the universe and natural forces.</div>
+                </div>
+                <div class="image-card">
+                    <img src="pic3.jpg" alt="Ancient Ceramic Cup">
+                    <div class="image-caption">Exquisite Pottery Art</div>
+                    <div class="image-description">The Anasazi were renowned for creating beautiful pottery. These ceramics were not only functional but also works of art, showcasing their exceptional craftsmanship and unique aesthetic sensibilities.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mask Comparison -->
+        <section class="section">
+            <h2>Dialogue Between Tradition and Modernity</h2>
+            <div class="comparison-section">
+                <div class="comparison-card">
+                    <img src="pic5.jpg" alt="Ancient Anasazi Mask">
+                    <h3>Ancient Traditional Masks</h3>
+                    <p>These ancient masks represent the spiritual traditions and ceremonial culture of the Anasazi people. Each mask has its specific symbolic meaning and was used in religious ceremonies and celebratory events.</p>
+                </div>
+                <div class="comparison-card">
+                    <img src="pic4.jpg" alt="Modern Anasazi Mask">
+                    <h3>Modern Inherited Masks</h3>
+                    <p>Modern artists continue to preserve the traditional craftsmanship of Anasazi mask making, incorporating contemporary artistic expressions while maintaining the original spiritual essence.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paleontological Discoveries -->
+        <section class="section">
+            <h2>Paleontological Discoveries</h2>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="pic6.jpg" alt="Ancient Bird Fossil">
+                    <div class="image-caption">Ancient Bird Fossils</div>
+                    <div class="image-description">These precious fossils record the environment and ecology of the Anasazi era. Birds held important symbolic significance in Anasazi culture and frequently appeared in their art and mythology.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Historical Timeline -->
+        <section class="section">
+            <h2>Anasazi Historical Timeline</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">100-700 AD</div>
+                        <h3>Early Development Period</h3>
+                        <p>The Anasazi began transitioning from nomadic life to settled agriculture, establishing their first permanent villages.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">700-1100 AD</div>
+                        <h3>Classical Period</h3>
+                        <p>Architectural skills reached their peak, constructing famous cliff dwellings and large community buildings.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1100-1300 AD</div>
+                        <h3>Golden Age</h3>
+                        <p>Population reached its peak, art and craftsmanship were most developed, and complex trade networks were established.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-year">1300-1600 AD</div>
+                        <h3>Decline Period</h3>
+                        <p>Due to climate change and resource pressure, the Anasazi gradually migrated to other regions, and their civilization gradually declined.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cultural Impact -->
+        <section class="section">
+            <h2>Cultural Impact and Legacy</h2>
+            <p style="font-size: 1.1em; line-height: 1.8; text-align: center; margin: 20px 0;">
+                Anasazi culture has had a profound impact on modern Native American cultures in the American Southwest. Their architectural techniques, artistic styles, and way of life continue to be preserved and developed in Pueblo tribes today. Through archaeological discoveries and oral histories from modern Native Americans, we can glimpse the glorious past of this mysterious civilization.
+            </p>
+        </section>
+
+        <footer>
+            <div style="margin-bottom: 20px;">
+                <h3 style="color: #8b4513; margin-bottom: 15px;">Group Members</h3>
+                <p style="font-size: 1.1em; color: #6b5b47; margin: 5px 0;">
+                    Allen Zhang • Eric Xi • Jeff Guo • Michal Wu
+                </p>
+            </div>
+            <p style="font-size: 1.1em; color: #6b5b47;">
+                © 2024 Anasazi Culture Exploration Website | Exploring the Mysteries of Ancient Civilization
+            </p>
+            <p style="font-size: 1em; color: #6b5b47; margin-top: 10px;">
+                Copyrighted and created by <a href="https://milk.shbs.club" target="_blank" style="color: #8b4513; text-decoration: none; font-weight: bold;">Milk_awa</a>
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
