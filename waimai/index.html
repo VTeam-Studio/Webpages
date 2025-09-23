@@ -69,6 +69,30 @@
             box-shadow: 0 8px 25px rgba(0,0,0,0.2);
         }
 
+        .contribute-section {
+            margin-top: 30px;
+        }
+
+        .contribute-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+
+        .contribute-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            background: linear-gradient(45deg, #ee5a24, #ff6b6b);
+        }
+
         @media (max-width: 768px) {
             .header h1 {
                 font-size: 2rem;
@@ -80,6 +104,11 @@
             
             .count-label {
                 font-size: 1.2rem;
+            }
+            
+            .contribute-link {
+                padding: 12px 24px;
+                font-size: 1rem;
             }
         }
     </style>
@@ -97,6 +126,12 @@
             <div class="count-label">次</div>
         </div>
 
+        <div class="contribute-section">
+            <a href="https://github.com/VTeam-Studio/Webpages/tree/master/waimai" target="_blank" class="contribute-link">
+                🔗 贡献到 GitHub 仓库
+            </a>
+        </div>
+<br><br><br>
         <div class="image-section"><!--PR请在项目添加png然后按照格式命名引用-->
             <img src="oops1.png" alt="外卖被收走现场" class="trophy-image">
             <img src="oops2.png" alt="外卖被收走现场" class="trophy-image">
