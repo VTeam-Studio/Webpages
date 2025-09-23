@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外卖被收走统计</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', 'Microsoft YaHei', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .count-display {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .count-number {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+        }
+
+        .count-label {
+            font-size: 1.5rem;
+            color: #666;
+        }
+
+        .image-section {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .trophy-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .count-number {
+                font-size: 3rem;
+            }
+            
+            .count-label {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="random-title">外卖被收走的次数</h1>
+            
+            <h2>自2025/09/01起</h2>
+        </div>
+        <br><br><br>
+        <div class="count-display">
+            <div class="count-number" id="total-count"><!--PR请修改这个数字-->17<!--PR请修改这个数字--></div>
+            <div class="count-label">次</div>
+        </div>
+
+        <div class="image-section"><!--PR请在项目添加png然后按照格式命名引用-->
+            <img src="oops1.png" alt="外卖被收走现场" class="trophy-image">
+            <img src="oops2.png" alt="外卖被收走现场" class="trophy-image">
+        </div><!--PR请在项目添加png然后按照格式命名引用-->
+    </div>
+
+    <script>
+        // 随机标题数组
+        const titles = [
+            "外卖被Irene嘎蛋的次数",
+            "外卖被Chris吃掉的次数"
+        ];
+
+        // 随机选择标题
+        function setRandomTitle() {
+            const randomIndex = Math.floor(Math.random() * titles.length);
+            document.getElementById('random-title').textContent = titles[randomIndex];
+        }
+
+        // 页面加载时设置随机标题
+        document.addEventListener('DOMContentLoaded', function() {
+            setRandomTitle();
+        });
+    </script>
+</body>
+</html>
