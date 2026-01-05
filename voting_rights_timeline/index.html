@@ -12,46 +12,22 @@
     <style>
         body {
             margin: 0;
-            padding: 20px;
+            padding: 0;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #ffffff 0%, #c9c58c 100%);
+            background: white;
             min-height: 100vh;
         }
         
         .container {
-            max-width: 1400px;
-            margin: 0 auto;
+            width: 100%;
+            margin: 0;
+            padding: 0;
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-            padding: 20px;
-        }
-        
-        h1 {
-            text-align: center;
-            color: #000;
-            margin-bottom: 10px;
-            font-size: 2.5em;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 30px;
-            font-size: 1.2em;
         }
         
         #timeline-embed {
             width: 100%;
-            height: 700px;
-        }
-        
-        .intro-text {
-            text-align: center;
-            color: #555;
-            max-width: 800px;
-            margin: 0 auto 20px;
-            line-height: 1.6;
+            height: 100vh;
         }
         
         /* TimelineJS3 文字颜色覆盖 - 确保所有文字都是黑色 */
@@ -117,9 +93,6 @@
 </head>
 <body>
     <div class="container">
-        <h1>Major Changes in U.S. Voting Rights</h1>
-        <p class="subtitle">A Timeline of the 5 Most Important Voting Rights Milestones in American History</p>
-        <p class="intro-text">Explore the transformative moments that expanded democracy and voting rights in America. Each milestone represents a significant step toward a more inclusive and representative democracy.</p>
         <div id="timeline-embed"></div>
     </div>
 
