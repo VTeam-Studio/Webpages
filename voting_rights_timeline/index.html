@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Major Changes in U.S. Voting Rights - TimelineJS3</title>
+    <script defer src="https://s.milkawa.xyz/script.js" data-website-id="3ac751cb-c151-494f-ab81-4bc1a3033bd9"></script>
+    
+    <!-- TimelineJS3 CSS -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            padding: 20px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 1.2em;
+        }
+        
+        #timeline-embed {
+            width: 100%;
+            height: 800px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Major Changes in U.S. Voting Rights</h1>
+        <p class="subtitle">A Timeline of the 5 Most Important Voting Rights Milestones in American History</p>
+        <div id="timeline-embed"></div>
+    </div>
+
+    <!-- TimelineJS3 JavaScript -->
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+    
+    <script>
+        var timelineData = {
+            "title": {
+                "media": {
+                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/United_States_Capitol_west_front_edit2.jpg/960px-United_States_Capitol_west_front_edit2.jpg",
+                    "caption": "United States Capitol - The Center of Voting Rights Legislation",
+                    "credit": "Wikimedia Commons"
+                },
+                "text": {
+                    "headline": "Major Changes in U.S. Voting Rights",
+                    "text": "<p>This timeline showcases the 5 most important changes to voting rights in U.S. history. These milestone events progressively expanded voting rights for American citizens, making democracy more inclusive and just.</p>"
+                }
+            },
+            "events": [
+                {
+                    "start_date": {
+                        "year": "1870"
+                    },
+                    "text": {
+                        "headline": "Fifteenth Amendment Ratified - African American Men Gain Voting Rights",
+                        "text": "<p><strong>Year:</strong> 1870</p><p><strong>Description:</strong> The Fifteenth Amendment prohibited the federal and state governments from denying a citizen the right to vote based on race, color, or previous condition of servitude. This was the first time in U.S. history that voting rights were explicitly protected by a constitutional amendment, opening the door to voting for African American men.</p><p><strong>Who:</strong> U.S. Congress, African American citizens, abolitionists</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/15th-amendment-celebration-1870.jpg/1471px-15th-amendment-celebration-1870.jpg?20060725233918",
+                        "caption": "Celebration of the Fifteenth Amendment - 1870",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1920"
+                    },
+                    "text": {
+                        "headline": "Nineteenth Amendment Ratified - Women Gain Voting Rights",
+                        "text": "<p><strong>Year:</strong> 1920</p><p><strong>Description:</strong> The Nineteenth Amendment prohibited voting discrimination based on sex, granting women the right to vote. This was a major victory for the women's suffrage movement, ending decades of struggle for women's voting rights and making the United States one of the first countries in the world to grant women the right to vote.</p><p><strong>Who:</strong> Susan B. Anthony, Elizabeth Cady Stanton, Alice Paul, National American Woman Suffrage Association</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Emmeline_Pankhurst_addresses_crowd.jpg",
+                        "caption": "Women's Suffrage Movement Protest",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1964"
+                    },
+                    "text": {
+                        "headline": "Twenty-Fourth Amendment Ratified - Poll Tax Abolished",
+                        "text": "<p><strong>Year:</strong> 1964</p><p><strong>Description:</strong> The Twenty-Fourth Amendment prohibited the use of poll taxes (head taxes) as a voting requirement in federal elections. Poll taxes were one of the main tools used by Southern states to prevent African Americans from voting. The abolition of poll taxes was an important victory for the civil rights movement.</p><p><strong>Who:</strong> President John F. Kennedy, President Lyndon B. Johnson, civil rights activists</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/PollTaxRecieptJefferson1917.JPG/819px-PollTaxRecieptJefferson1917.JPG",
+                        "caption": "Poll Tax Receipt - Used to restrict voting rights before 1964",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1965"
+                    },
+                    "text": {
+                        "headline": "Voting Rights Act Passed - Prohibits Racial Discrimination in Voting",
+                        "text": "<p><strong>Year:</strong> 1965</p><p><strong>Description:</strong> The Voting Rights Act was one of the most important legislative achievements of the civil rights movement. The act prohibited all forms of voting discrimination, including literacy tests and other barriers used to prevent African Americans from voting. The act also required certain states with a history of discrimination to obtain federal approval before changing their voting laws.</p><p><strong>Who:</strong> President Lyndon B. Johnson, Martin Luther King Jr., John Lewis, civil rights activists</p>"
+                    },
+                    "media": {
+                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIZpOvMCGkt2qP95p1TnZ5ENJwZznJPVGCw&s",
+                        "caption": "President Lyndon B. Johnson signing the Voting Rights Act - August 6, 1965",
+                        "credit": "Wikimedia Commons"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1971"
+                    },
+                    "text": {
+                        "headline": "Twenty-Sixth Amendment Ratified - Voting Age Lowered to 18",
+                        "text": "<p><strong>Year:</strong> 1971</p><p><strong>Description:</strong> The Twenty-Sixth Amendment lowered the voting age from 21 to 18. This change was primarily a response to the argument during the Vietnam War that 'if 18-year-olds can be drafted to serve in the military, they should be able to vote.' The amendment was ratified in record time, granting millions of young Americans the right to vote.</p><p><strong>Who:</strong> President Richard Nixon, young activists, student organizations</p>"
+                    },
+                    "media": {
+                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Greater_coat_of_arms_of_the_United_States.svg/330px-Greater_coat_of_arms_of_the_United_States.svg.png",
+                        "caption": "Twenty-Sixth Amendment Certification Ceremony - 1971",
+                        "credit": "Wikimedia Commons"
+                    }
+                }
+            ]
+        };
+
+        window.timeline = new TL.Timeline('timeline-embed', timelineData);
+    </script>
+</body>
+</html>
