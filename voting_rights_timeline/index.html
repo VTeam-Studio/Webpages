@@ -14,7 +14,7 @@
             margin: 0;
             padding: 20px;
             font-family: 'Helvetica Neue', Arial, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #c9c58c 100%);
             min-height: 100vh;
         }
         
@@ -29,7 +29,7 @@
         
         h1 {
             text-align: center;
-            color: #333;
+            color: #000;
             margin-bottom: 10px;
             font-size: 2.5em;
         }
@@ -43,7 +43,75 @@
         
         #timeline-embed {
             width: 100%;
-            height: 800px;
+            height: 700px;
+        }
+        
+        .intro-text {
+            text-align: center;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto 20px;
+            line-height: 1.6;
+        }
+        
+        /* TimelineJS3 文字颜色覆盖 - 确保所有文字都是黑色 */
+        /* 使用通用选择器覆盖所有文字元素 */
+        #timeline-embed .tl-timeline * {
+            color: #000 !important;
+        }
+        
+        /* 特别针对slide内容 */
+        #timeline-embed .tl-slide *,
+        #timeline-embed .tl-slide-content *,
+        #timeline-embed .tl-slide-text *,
+        #timeline-embed .tl-slide-text-content *,
+        #timeline-embed .tl-slide-headline,
+        #timeline-embed .tl-slide-description,
+        #timeline-embed .tl-slide-credit,
+        #timeline-embed .tl-slide-caption,
+        #timeline-embed .tl-headline,
+        #timeline-embed .tl-text,
+        #timeline-embed .tl-text-content *,
+        #timeline-embed .tl-credit,
+        #timeline-embed .tl-caption,
+        #timeline-embed .tl-media-credit,
+        #timeline-embed .tl-media-caption,
+        #timeline-embed h1,
+        #timeline-embed h2,
+        #timeline-embed h3,
+        #timeline-embed h4,
+        #timeline-embed h5,
+        #timeline-embed h6,
+        #timeline-embed p,
+        #timeline-embed span,
+        #timeline-embed div,
+        #timeline-embed strong,
+        #timeline-embed em {
+            color: #000 !important;
+        }
+        
+        /* 引用（quote）使用灰色 - 放在后面以覆盖上面的黑色 */
+        #timeline-embed blockquote,
+        #timeline-embed blockquote *,
+        #timeline-embed .tl-slide-text-content blockquote,
+        #timeline-embed .tl-slide-text-content blockquote *,
+        #timeline-embed .tl-text-content blockquote,
+        #timeline-embed .tl-text-content blockquote *,
+        #timeline-embed blockquote p,
+        #timeline-embed blockquote span,
+        #timeline-embed blockquote strong,
+        #timeline-embed blockquote em,
+        #timeline-embed blockquote br {
+            color: #666 !important;
+        }
+        
+        /* 时间线标记上的文字 */
+        #timeline-embed .tl-timemarker *,
+        #timeline-embed .tl-timemarker-content *,
+        #timeline-embed .tl-timemarker-text,
+        #timeline-embed .tl-timemarker-title,
+        #timeline-embed .tl-timenav * {
+            color: #000 !important;
         }
     </style>
 </head>
@@ -51,6 +119,7 @@
     <div class="container">
         <h1>Major Changes in U.S. Voting Rights</h1>
         <p class="subtitle">A Timeline of the 5 Most Important Voting Rights Milestones in American History</p>
+        <p class="intro-text">Explore the transformative moments that expanded democracy and voting rights in America. Each milestone represents a significant step toward a more inclusive and representative democracy.</p>
         <div id="timeline-embed"></div>
     </div>
 
@@ -61,90 +130,230 @@
         var timelineData = {
             "title": {
                 "media": {
-                    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/United_States_Capitol_west_front_edit2.jpg/960px-United_States_Capitol_west_front_edit2.jpg",
+                    "url": "https://www.americanprogress.org/wp-content/uploads/sites/2/2021/10/GettyImages-1229491933.jpg?w=1040",
                     "caption": "United States Capitol - The Center of Voting Rights Legislation",
-                    "credit": "Wikimedia Commons"
+                    "credit": "2020 Getty Images"
                 },
                 "text": {
                     "headline": "Major Changes in U.S. Voting Rights",
-                    "text": "<p>This timeline showcases the 5 most important changes to voting rights in U.S. history. These milestone events progressively expanded voting rights for American citizens, making democracy more inclusive and just.</p>"
+                    "text": "<p style='color: #000;'>This timeline showcases the 5 most important changes to voting rights in U.S. history. These milestone events progressively expanded voting rights for American citizens, making democracy more inclusive and just.</p><p style='color: #000;'><em>The right to vote is the foundation of any democracy. Throughout American history, courageous individuals and movements have fought to expand this fundamental right to all citizens.</em></p>"
+                },
+                "background": {
+                    "color": "#ffffff"
                 }
             },
             "events": [
                 {
                     "start_date": {
-                        "year": "1870"
+                        "year": "1870",
+                        "month": "3",
+                        "day": "30"
                     },
                     "text": {
                         "headline": "Fifteenth Amendment Ratified - African American Men Gain Voting Rights",
-                        "text": "<p><strong>Year:</strong> 1870</p><p><strong>Description:</strong> The Fifteenth Amendment prohibited the federal and state governments from denying a citizen the right to vote based on race, color, or previous condition of servitude. This was the first time in U.S. history that voting rights were explicitly protected by a constitutional amendment, opening the door to voting for African American men.</p><p><strong>Who:</strong> U.S. Congress, African American citizens, abolitionists</p>"
+                        "text": "<p style='color: #000;'><strong>Description:</strong> The Fifteenth Amendment prohibited the federal and state governments from denying a citizen the right to vote based on race, color, or previous condition of servitude. This was the first time in U.S. history that voting rights were explicitly protected by a constitutional amendment, opening the door to voting for African American men.</p><blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666;'>\"The right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of race, color, or previous condition of servitude.\"<br><strong style='color: #666;'>— Fifteenth Amendment, Section 1</strong></blockquote>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/15th-amendment-celebration-1870.jpg/1471px-15th-amendment-celebration-1870.jpg?20060725233918",
+                        "url": "https://assets.teenvogue.com/photos/5e30b8f03a76710009d66b5a/16:9/w_2560%2Cc_limit/15th%2520amendment%2520og%2520history%2520black%2520vote%2520teen%2520vogue.jpg",
                         "caption": "Celebration of the Fifteenth Amendment - 1870",
-                        "credit": "Wikimedia Commons"
+                        "credit": "Teenvogue.com"
+                    },
+                    "background": {
+                        "color": "#ffffff"
                     }
                 },
                 {
                     "start_date": {
-                        "year": "1920"
+                        "year": "1920",
+                        "month": "8",
+                        "day": "18"
                     },
                     "text": {
                         "headline": "Nineteenth Amendment Ratified - Women Gain Voting Rights",
-                        "text": "<p><strong>Year:</strong> 1920</p><p><strong>Description:</strong> The Nineteenth Amendment prohibited voting discrimination based on sex, granting women the right to vote. This was a major victory for the women's suffrage movement, ending decades of struggle for women's voting rights and making the United States one of the first countries in the world to grant women the right to vote.</p><p><strong>Who:</strong> Susan B. Anthony, Elizabeth Cady Stanton, Alice Paul, National American Woman Suffrage Association</p>"
+                        "text": "<p style='color: #000;'><strong>Description:</strong> The Nineteenth Amendment prohibited voting discrimination based on sex, granting women the right to vote. This was a major victory for the women's suffrage movement, ending decades of struggle for women's voting rights and making the United States one of the first countries in the world to grant women the right to vote.</p><blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666;'>\"The right of citizens of the United States to vote shall not be denied or abridged by the United States or by any State on account of sex.\"<br><strong style='color: #666;'>— Nineteenth Amendment, Section 1</strong></blockquote>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Emmeline_Pankhurst_addresses_crowd.jpg",
+                        "url": "https://www.nps.gov/bepa/learn/images/SuffragePicketing1az.jpg",
                         "caption": "Women's Suffrage Movement Protest",
-                        "credit": "Wikimedia Commons"
+                        "credit": " National Woman's Party"
+                    },
+                    "background": {
+                        "color": "#ffffff"
                     }
                 },
                 {
                     "start_date": {
-                        "year": "1964"
+                        "year": "1964",
+                        "month": "1",
+                        "day": "23"
                     },
                     "text": {
                         "headline": "Twenty-Fourth Amendment Ratified - Poll Tax Abolished",
-                        "text": "<p><strong>Year:</strong> 1964</p><p><strong>Description:</strong> The Twenty-Fourth Amendment prohibited the use of poll taxes (head taxes) as a voting requirement in federal elections. Poll taxes were one of the main tools used by Southern states to prevent African Americans from voting. The abolition of poll taxes was an important victory for the civil rights movement.</p><p><strong>Who:</strong> President John F. Kennedy, President Lyndon B. Johnson, civil rights activists</p>"
+                        "text": "<p style='color: #000;'><strong>Description:</strong> The Twenty-Fourth Amendment prohibited the use of poll taxes (head taxes) as a voting requirement in federal elections. Poll taxes were one of the main tools used by Southern states to prevent African Americans from voting. The abolition of poll taxes was an important victory for the civil rights movement.</p><blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666;'>\"The right of citizens of the United States to vote in any primary or other election... shall not be denied or abridged... by reason of failure to pay any poll tax or other tax.\"<br><strong style='color: #666;'>— Twenty-Fourth Amendment, Section 1</strong></blockquote>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/PollTaxRecieptJefferson1917.JPG/819px-PollTaxRecieptJefferson1917.JPG",
+                        "url": "https://th-thumbnailer.cdn-si-edu.com/eZqz6Dx_Qf4TKoKOhGL67QEZuzY=/1072x720/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/2a/ae/2aae5f93-d68f-4f3e-93cc-78dec0043224/2012_104_001-web-resize.jpg",
                         "caption": "Poll Tax Receipt - Used to restrict voting rights before 1964",
                         "credit": "Wikimedia Commons"
+                    },
+                    "background": {
+                        "color": "#ffffff"
                     }
                 },
                 {
                     "start_date": {
-                        "year": "1965"
+                        "year": "1965",
+                        "month": "8",
+                        "day": "6"
                     },
                     "text": {
                         "headline": "Voting Rights Act Passed - Prohibits Racial Discrimination in Voting",
-                        "text": "<p><strong>Year:</strong> 1965</p><p><strong>Description:</strong> The Voting Rights Act was one of the most important legislative achievements of the civil rights movement. The act prohibited all forms of voting discrimination, including literacy tests and other barriers used to prevent African Americans from voting. The act also required certain states with a history of discrimination to obtain federal approval before changing their voting laws.</p><p><strong>Who:</strong> President Lyndon B. Johnson, Martin Luther King Jr., John Lewis, civil rights activists</p>"
+                        "text": "<p style='color: #000;'><strong>Description:</strong> The Voting Rights Act was one of the most important legislative achievements of the civil rights movement. The act prohibited all forms of voting discrimination, including literacy tests and other barriers used to prevent African Americans from voting. The act also required certain states with a history of discrimination to obtain federal approval before changing their voting laws.</p><blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666;'>\"This act flows from a clear and simple wrong. Its only purpose is to right that wrong. Millions of Americans are denied the right to vote because of their color. This law will ensure them the right to vote.\"<br><strong style='color: #666;'>— President Lyndon B. Johnson, August 6, 1965</strong></blockquote>"
                     },
                     "media": {
-                        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxIZpOvMCGkt2qP95p1TnZ5ENJwZznJPVGCw&s",
+                        "url": "https://static.politico.com/c3/fe/61c0bf3042ca8f7ecb4c841e64cd/lbj-voting-rights-ap.jpg",
                         "caption": "President Lyndon B. Johnson signing the Voting Rights Act - August 6, 1965",
-                        "credit": "Wikimedia Commons"
+                        "credit": "AP"
+                    },
+                    "background": {
+                        "color": "#ffffff"
                     }
                 },
                 {
                     "start_date": {
-                        "year": "1971"
+                        "year": "1971",
+                        "month": "7",
+                        "day": "1"
                     },
                     "text": {
                         "headline": "Twenty-Sixth Amendment Ratified - Voting Age Lowered to 18",
-                        "text": "<p><strong>Year:</strong> 1971</p><p><strong>Description:</strong> The Twenty-Sixth Amendment lowered the voting age from 21 to 18. This change was primarily a response to the argument during the Vietnam War that 'if 18-year-olds can be drafted to serve in the military, they should be able to vote.' The amendment was ratified in record time, granting millions of young Americans the right to vote.</p><p><strong>Who:</strong> President Richard Nixon, young activists, student organizations</p>"
+                        "text": "<p style='color: #000;'><strong>Description:</strong> The Twenty-Sixth Amendment lowered the voting age from 21 to 18. This change was primarily a response to the argument during the Vietnam War that 'if 18-year-olds can be drafted to serve in the military, they should be able to vote.' The amendment was ratified in record time, granting millions of young Americans the right to vote.</p><blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666;'>\"The right of citizens of the United States, who are eighteen years of age or older, to vote shall not be denied or abridged by the United States or by any State on account of age.\"<br><strong style='color: #666;'>— Twenty-Sixth Amendment, Section 1</strong></blockquote>"
                     },
                     "media": {
-                        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Greater_coat_of_arms_of_the_United_States.svg/330px-Greater_coat_of_arms_of_the_United_States.svg.png",
+                        "url": "https://static.politico.com/97/28/e58e0fab4bc6beb63d0c58356e93/nixon-amendment-ap.jpg",
                         "caption": "Twenty-Sixth Amendment Certification Ceremony - 1971",
-                        "credit": "Wikimedia Commons"
+                        "credit": "Charles Tasnadi"
+                    },
+                    "background": {
+                        "color": "#ffffff"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1865"
+                    },
+                    "text": {
+                        "headline": "Frederick Douglass on Voting Rights",
+                        "text": "<blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666; font-size: 1.1em;'>\"Slavery is not abolished until the black man has the ballot.\"<br><strong style='color: #666;'>— Frederick Douglass, 1865</strong></blockquote>"
+                    },
+                    "background": {
+                        "color": "#ffffff"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1873"
+                    },
+                    "text": {
+                        "headline": "Susan B. Anthony on Women's Rights",
+                        "text": "<blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666; font-size: 1.1em;'>\"Men, their rights, and nothing more; women, their rights, and nothing less.\"<br><strong style='color: #666;'>— Susan B. Anthony, 1873</strong></blockquote>"
+                    },
+                    "background": {
+                        "color": "#ffffff"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1963"
+                    },
+                    "text": {
+                        "headline": "Martin Luther King Jr. on the Ballot",
+                        "text": "<blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666; font-size: 1.1em;'>\"Give us the ballot and we will no longer have to worry the federal government about our basic rights.\"<br><strong style='color: #666;'>— Martin Luther King Jr., 1957</strong></blockquote>"
+                    },
+                    "background": {
+                        "color": "#ffffff"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1965",
+                        "month": "3",
+                        "day": "7"
+                    },
+                    "text": {
+                        "headline": "Bloody Sunday - Selma to Montgomery March",
+                        "text": "<blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666; font-size: 1.1em;'>\"We must use time creatively, in the knowledge that the time is always ripe to do right.\"<br><strong style='color: #666;'>— Martin Luther King Jr., on the Selma marches</strong></blockquote>"
+                    },
+                    "background": {
+                        "color": "#ffffff"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1970"
+                    },
+                    "text": {
+                        "headline": "The Slogan That Changed Voting Age",
+                        "text": "<blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666; font-size: 1.1em;'>\"Old enough to fight, old enough to vote.\"<br><strong style='color: #666;'>— Popular slogan during the Vietnam War era, 1970</strong></blockquote>"
+                    },
+                    "background": {
+                        "color": "#ffffff"
+                    }
+                },
+                {
+                    "start_date": {
+                        "year": "1848"
+                    },
+                    "text": {
+                        "headline": "Elizabeth Cady Stanton on Democracy",
+                        "text": "<blockquote style='border-left: 4px solid #333; padding-left: 15px; margin: 20px 0; font-style: italic; color: #666; font-size: 1.1em;'>\"The right is ours. Have it we must. Use it we will.\"<br><strong style='color: #666;'>— Elizabeth Cady Stanton, Seneca Falls Convention, 1848</strong></blockquote>"
+                    },
+                    "background": {
+                        "color": "#ffffff"
                     }
                 }
             ]
         };
 
         window.timeline = new TL.Timeline('timeline-embed', timelineData);
+        
+        // 强制设置所有文字为黑色
+        setTimeout(function() {
+            var timelineElement = document.getElementById('timeline-embed');
+            if (timelineElement) {
+                var allTextElements = timelineElement.querySelectorAll('*');
+                allTextElements.forEach(function(el) {
+                    var style = window.getComputedStyle(el);
+                    // 只修改文字元素，跳过图片、按钮等
+                    if (el.tagName && ['P', 'SPAN', 'DIV', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'STRONG', 'EM', 'BLOCKQUOTE', 'LI', 'TD', 'TH'].includes(el.tagName)) {
+                        if (style.color && style.color !== 'rgb(0, 0, 0)' && style.color !== '#000' && style.color !== '#000000') {
+                            el.style.color = '#000 !important';
+                        }
+                    }
+                });
+            }
+        }, 1000);
+        
+        // 监听TimelineJS3的slidechange事件，确保每次切换时文字都是黑色
+        if (window.timeline) {
+            window.timeline.on('change', function() {
+                setTimeout(function() {
+                    var timelineElement = document.getElementById('timeline-embed');
+                    if (timelineElement) {
+                        var textElements = timelineElement.querySelectorAll('.tl-slide-text-content, .tl-slide-headline, .tl-slide-description, .tl-slide-credit, .tl-slide-caption, .tl-text-content, .tl-headline, .tl-text, .tl-credit, .tl-caption');
+                        textElements.forEach(function(el) {
+                            el.style.color = '#000';
+                            var children = el.querySelectorAll('*');
+                            children.forEach(function(child) {
+                                if (['P', 'SPAN', 'DIV', 'STRONG', 'EM', 'BLOCKQUOTE'].includes(child.tagName)) {
+                                    child.style.color = '#000';
+                                }
+                            });
+                        });
+                    }
+                }, 100);
+            });
+        }
     </script>
 </body>
 </html>
